@@ -1,0 +1,35 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<div class="background_image" style="background-image:url({% static 'R.jpg'%}); height: 100%;">
+<div class="login" >
+	<div class="login-header">
+		<h1>Login</h1><br>
+	</div>
+	{% csrf_token %}
+	<form action="/fbapp/detail"  method="post"> {% csrf_token %}
+	  <div class="login-form">
+		<h3>Facebook Name:</h3>
+		<input type="text" placeholder="Username" /><br>
+		<h3>Password:</h3>
+		<input type="password" placeholder="Password" />
+		<br>
+		  <input type="submit" value="Login" class="login-button"/>
+		<br>
+		<a class="btn btn-success" href="/fbapp/sign">Sign Up!</a>
+		<br>
+	</div>
+		</form>
+</div>
+<div class="error-page">
+	<div class="try-again">Error: Try again?</div>
+</div>
+</div>
+</body>
+</html>

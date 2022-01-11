@@ -1,0 +1,29 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+</head>
+<body bgcolor="cyan">
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<div class="login" >
+	<div class="login-header">
+		<h1>Sign Up</h1><br>
+	</div>
+<form action="register" method="post">
+    <div class="login-form">
+    {% csrf_token %}
+    <input type="text" name="Username" placeholder="Username"><br><br>
+     <input type="password" name="Password" placeholder="Password"><br><br>
+    <input type="number" name="Number" placeholder="Phone"><br><br>
+     <input type="email" name="mail" placeholder="E-Mail"><br><br>
+    <input type="date" name="DOB" placeholder="DOB"> <br><br>
+     <input type="text" name="address" placeholder="Address"><br><br>
+    <input type="submit" value="SIGN UP"><br>
+    </div>
+</form>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+{% load static %}
+{% block content %}
+<html>
+<head>
+    <title>Profile</title>
+    <meta name="description" content="Core HTML Project">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static ' bootstrap/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static ' select2/select2.min.css' %}">
+    <link rel="stylesheet" href="{% static ' owlcarousel/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href=" {% static 'lightcase/lightcase.css' %}">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Work+Sans:300,400,700" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link href="https://file.myfontastic.com/7vRKgqrN3iFEnLHuqYhYuL/icons.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+</head>
+<body data-spy="scroll" data-target="#navbar-nav-header" class="single-layout">
+	<div class="boxed-page">
+		<nav id="gtco-header-navbar" class="navbar navbar-expand-lg py-4">
+</nav>
+  <div class="container text-center">
+    <h1 class="display-2 mb-4 single-blog-title">Ajay</h1>
+  </div><br>
+        <a class="btn btn-success" href="/fbapp/edit"><h4><b>Edit</b></h4></a>
+</div>
+    <div align="right">
+    </div>
+<section id="gtco-single-content" class="bg-white">
+    <div class="container">
+        <div class="section-content blog-content">
+            <div class="row">
+                <div class="col-md-8 offset-md-2 mt-4">
+                    {% csrf_token %}
+                    <h4><b>name:</b></h4>
+                    <h5>Number:</h5>
+                    <h5>E-mail:</h5>
+                    <h5>DOB:</h5>
+                    <h5>Address:</h5><br>
+                    <img class="float-left" width="320px" src="{% static 'download.png'%}" alt="">
+                    <br>
+                     # About....Consectetur adipisicing elit. Sint, corrupti deleniti, rem mollitia quam cum quo, animi ipsa praesentium officiis ducimus! Modi aperiam, nulla ipsum, totam natus consequuntur fugiatetur sapiente dolorem facilis, eum nobis sequi eveniet assumenda vel voluptatem
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+	<!-- External JS -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+	<script src="{% static ' bootstrap/popper.min.js' %}"></script>
+	<script src="{% static ' bootstrap/bootstrap.min.js' %}"></script>
+	<script src=" {% static 'select2/select2.min.js ' %}"></script>
+	<script src="{% static ' owlcarousel/owl.carousel.min.js' %}"></script>
+	<script src="{% static ' isotope/isotope.min.js' %}"></script>
+	<script src="{% static ' lightcase/lightcase.js' %}"></script>
+	<script src=" {% static 'waypoints/waypoint.min.js' %}"></script>
+	<script src=" {% static 'countTo/jquery.countTo.js' %}"></script>
+
+	<!-- Main JS -->
+	<script src="{% static 'js/app.min.js ' %}"></script>
+</body>
+</html>
+{% endblock %}
